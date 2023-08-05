@@ -9,4 +9,6 @@ module com.example.demojavafx2 {
     exports com.example.demojavafx2;
     exports com.example.demojavafx2.gama_LunarLander;
     opens com.example.demojavafx2.gama_LunarLander to javafx.fxml;
+    exports com.example.demojavafx2.training;
+    opens com.example.demojavafx2.training to javafx.fxml;
 }
