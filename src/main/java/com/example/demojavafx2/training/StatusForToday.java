@@ -23,6 +23,14 @@ public class StatusForToday implements Event {
         sum += totalProfitForToday;
     }
 
+    public int getSum(String item) {
+        int result = 0;
+        for (Investition in : myInvestition) {
+            if (in.name.equals(item)) result++;
+        }
+        return result;
+    }
+
     public void addItem(Investition item) {
         if (sum >= item.price) {
             myInvestition.add(item);
@@ -68,8 +76,8 @@ public class StatusForToday implements Event {
         addItem(scooter);
     }
 
-    public int getballance(){
-        int profitForDay=0;
+    public int getballance() {
+        int profitForDay = 0;
         for (Investition item : myInvestition) {
             profitForDay += item.profitForDay;
         }
